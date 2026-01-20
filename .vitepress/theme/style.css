@@ -1,0 +1,122 @@
+/* Custom styles */
+
+/* Brand colors */
+:root {
+  --vp-c-brand-1: rgb(251, 44, 54);
+  --vp-c-brand-3: #fb464f;
+  --vp-c-brand-2: #fc5d65;
+  --vp-c-brand-soft: rgba(251, 44, 54, 0.15);
+  --vp-c-brand-soft-50: rgba(251, 44, 54, 0.5);
+  --custom-tip-border: rgba(173, 173, 173, 0.3);
+}
+
+.dark {
+  --vp-c-brand-1: #fb2c36;
+  --vp-c-brand-3: #fb464f;
+  --vp-c-brand-2: #fc5d65;
+  --vp-c-brand-soft: rgba(251, 44, 54, 0.35);
+  --vp-c-brand-soft-50: rgba(251, 44, 54, 0.7);
+    --custom-tip-border: rgba(173, 173, 173, 0.3);
+  /* --vp-c-bg: oklch(0.208 0.042 265.755); */
+}
+
+/* Hero title size customization */
+.VPHero .name {
+  font-size: 2.25rem !important;
+  font-weight: 600 !important;  
+  line-height: 1.2 !important;
+}
+
+/* Hero text (subtitle) */
+.VPHero .text {
+  font-size: 2.25rem !important;
+  font-weight: 600 !important;  
+  line-height: 1.1 !important;
+}
+
+/* Hero tagline */
+.VPHero .tagline {
+  margin-top: 0 !important;
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+}
+
+.VPImage {
+    max-width: 300px !important;
+    border-radius: 32px !important;
+}
+
+/* Navbar logo size */
+.VPNavBarTitle .logo {
+    height: 26px !important;
+    width: auto !important;
+    border-radius: 0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .VPHero .name {
+    font-size: 40px !important;
+  }
+  .VPHero .text {
+    font-size: 32px !important;
+  }
+  .VPHero .tagline {
+    font-size: 18px !important;
+  }
+}
+
+a[href="https://kodzero.pro/"].VPNavBarMenuLink {
+  font-weight: 600 !important;
+  color: red !important;
+}
+
+.VPLastUpdated {
+  opacity: 0.7 !important;
+  font-weight: 400 !important ;
+}
+
+/* :root {
+} */
+
+.vp-doc h1 { /* vs defaults */
+  font-size: 1.75rem;
+  margin-bottom: 2rem; /* 0 */
+}
+
+.vp-doc h2 { /* vs defaults */
+  margin-top: 4rem; /* 3rem */
+  padding-top: 2rem; /* 24px */
+  padding-bottom: 0.75rem; /* 0 */
+  font-size: 1.35rem; /* 24px */
+}
+
+.vp-doc h3 {
+  /* unknown */
+  font-size: 1.2rem;
+  /* 32px */
+  margin-top: 2.5rem;
+  /* 0 */
+  padding-top: 0; 
+  /* 0 */
+  padding-bottom: 0.5rem;
+}
+
+/* custom blocks */
+div.custom-block {
+  margin-top: 2rem !important;
+}
+
+/* Tip block: border only, no background */
+div.custom-block.tip {
+  background-color: transparent !important;
+  border: 1px solid var(--custom-tip-border) !important;
+}
+
+div.custom-block.tip .custom-block-title {
+  color: var(--vp-c-text) !important;
+}
+
+div.custom-block.danger .custom-block-title {
+  color: var(--vp-c-brand-3) !important;
+}
