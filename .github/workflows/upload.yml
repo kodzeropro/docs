@@ -29,5 +29,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
           source: .vitepress/dist/*
-          target: /apps/www/kodzero.pro/docs/
+          target: ${{ secrets.FTP_PATH }}
           strip_components: 2
