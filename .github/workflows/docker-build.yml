@@ -32,7 +32,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/${{ github.repository_owner }}/docs:latest .
+        run: docker build -t ghcr.io/${{ github.repository_owner }}/web-docs:latest .
 
       - name: Push Docker image
-        run: docker push ghcr.io/${{ github.repository_owner }}/docs:latest
+        run: docker push ghcr.io/${{ github.repository_owner }}/web-docs:latest
