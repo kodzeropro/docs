@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "@lesha2r/kodzero-lib-shared": "^0.0.3"
   }
 }
