@@ -35,8 +35,11 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Docker image
-        run: docker build -t ghcr.io/${{ github.repository_owner }}/web-docs:latest .
-
-      - name: Push Docker image
-        run: docker push ghcr.io/${{ github.repository_owner }}/web-docs:latest
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/web-docs:latest
+          build-args: |
+            NPM_TOKEN=${{ secrets.NPM_TOKEN }}
