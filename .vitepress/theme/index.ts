@@ -2,7 +2,7 @@
 import { onMounted, watch } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import { useRoute, type EnhanceAppContext } from 'vitepress'
-import LibShared from '@lesha2r/kodzero-lib-shared'
+import LibShared from '@lesha2r/kodzero-lib-shared-web'
 // Int
 import './style.css'
 import SupportEmail from '../components/SupportEmail.vue'

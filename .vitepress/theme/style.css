@@ -1,23 +1,25 @@
-/* Custom styles */
-
-/* Brand colors */
 :root {
-  --vp-c-brand-1: rgb(251, 44, 54);
-  --vp-c-brand-3: #fb464f;
-  --vp-c-brand-2: #fc5d65;
+  /* nuxt ui vars */
+  --color-red-200: oklch(88.5% .062 18.334);
+  --color-red-500: oklch(63.7% .237 25.331);
+  --ui-color-primary-50: oklch(97.1% 0.013 17.38);
+  --ui-color-primary-100: oklch(93.6% 0.032 17.717);
+  --ui-color-primary-200: oklch(88.5% 0.062 18.334);
+  --ui-color-primary-300: oklch(80.8% 0.114 19.571);
+  --ui-color-primary-400: oklch(70.4% 0.191 22.216);
+  --ui-color-primary-500: oklch(63.7% 0.237 25.331);
+  --ui-color-primary-600: oklch(57.7% 0.245 27.325);
+  --ui-color-primary-700: oklch(50.5% 0.213 27.518);
+  --ui-color-primary-800: oklch(44.4% 0.177 26.899);
+  --ui-color-primary-900: oklch(39.6% 0.141 25.723);
+  /* custom vars */
+  --custom-tip-border: rgba(173, 173, 173, 0.3);
+  /* vitepress vars */
+  --vp-c-brand-1: var(--ui-color-primary-500);
+  --vp-c-brand-3: var(--ui-color-primary-400);
+  --vp-c-brand-2: var(--ui-color-primary-300);
   --vp-c-brand-soft: rgba(251, 44, 54, 0.15);
   --vp-c-brand-soft-50: rgba(251, 44, 54, 0.5);
-  --custom-tip-border: rgba(173, 173, 173, 0.3);
-}
-
-.dark {
-  --vp-c-brand-1: #fb2c36;
-  --vp-c-brand-3: #fb464f;
-  --vp-c-brand-2: #fc5d65;
-  --vp-c-brand-soft: rgba(251, 44, 54, 0.35);
-  --vp-c-brand-soft-50: rgba(251, 44, 54, 0.7);
-    --custom-tip-border: rgba(173, 173, 173, 0.3);
-  /* --vp-c-bg: oklch(0.208 0.042 265.755); */
 }
 
 /* Hero title size customization */
@@ -68,7 +70,7 @@
 
 a[href="https://kodzero.pro/"].VPNavBarMenuLink {
   font-weight: 600 !important;
-  color: red !important;
+  /* color: red !important; */
 }
 
 .VPLastUpdated {
@@ -119,4 +121,49 @@ div.custom-block.tip .custom-block-title {
 
 div.custom-block.danger .custom-block-title {
   color: var(--vp-c-brand-3) !important;
+}
+
+/* Dark mode adjustment */
+.dark {
+  /* custom vars */
+  --custom-border: rgb(26, 35, 58);
+  --custom-tip-border: var(--custom-border);
+  /* vitepress vars */
+  --vp-c-brand-1: var(--ui-color-primary-400);
+  --vp-c-brand-3: var(--ui-color-primary-300);
+  --vp-c-brand-2: var(--ui-color-primary-200);
+  --vp-c-default-soft: rgba(1, 7, 23, 0.15);
+  --vp-c-brand-soft: rgba(251, 44, 54, 0.35);
+  --vp-c-brand-soft-50: rgba(251, 44, 54, 0.7);
+  --vp-c-bg: rgb(15, 23, 43);
+  --vp-c-bg-alt: rgb(13, 20, 39);
+  --vp-c-bg-soft: rgb(12, 20, 36);
+  --vp-button-alt-bg: unset !important;
+  --vp-c-divider: var(--vp-c-bg-alt);
+  --vp-c-bg-elv: var(--vp-c-bg-alt);
+  --vp-c-gutter: var(--custom-border); /* used in navbar's border-bottom */
+  --vp-custom-block-info-bg: rgb(21, 29, 49);
+  --vp-local-search-bg: var(--vp-c-bg-soft);
+  --vp-local-search-result-border: var(--custom-border); 
+}
+
+.dark .VPLastUpdated {
+  color: #92b0c5 !important;
+}
+
+.dark .VPSwitch {
+  border-color: var(--custom-border);
+}
+
+.dark .VPButton.alt {
+  background-color: var(--vp-cp-bg) !important;
+  border: 1px solid var(--vp-c-brand-2) !important;
+}
+
+.dark .VPButton.alt:hover {
+  background-color: var(--vp-c-bg-alt) !important;
+}
+
+.dark .pager-link {
+  border-color: var(--custom-border);
 }

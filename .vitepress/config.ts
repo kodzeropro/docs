@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import LibShared from '@lesha2r/kodzero-lib-shared'
+import LibShared from '@lesha2r/kodzero-lib-shared-web'
 
 // Расширяем тип темы для кастомных свойств
 declare module 'vitepress' {
@@ -150,5 +150,8 @@ export default defineConfig({
         
         // @ts-ignore
         supportEmail: 'support@kodzero.pro'
+    },
+    sitemap: {
+        hostname: 'https://kodzero.pro/docs/'
     }
 })
